@@ -1,0 +1,52 @@
+.createEvents {
+  grid-column: center-start / center-end;
+
+  margin: 5rem 0;
+
+  grid-row-gap: 3rem;
+  display: grid;
+
+}
+.createEvent--sub{
+  @supports(display: grid) {
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 1rem;
+    align-items: start;
+    justify-content: center;
+  }
+}
+.createEvent{
+  @supports(display: grid) {
+    width: auto;
+    margin-bottom: 0;
+}
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+
+}
+
+
+
+.form__box--overlap{
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-column-gap: 1rem;
+}
+
+.pill__box {
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+  border-radius: 10rem;
+  background-color: $color-app-white-light;
+  font-size: $font-12;
+}
+
+.pill__label {
+  color: $color-red;
+  padding-left: 1rem;
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+@import "./rootScss/root.scss";
+
+.signIn {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+
+  padding: 12rem 0;
+
+  z-index: 99999;
+  transition: all 0.3s;
+
+  &__close {
+    &:link,
+    &:visited {
+      @include aLink;
+
+      padding: 1rem;
+      color: $color-primary-dark-2;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      line-height: 1;
+      transition: all 0.2s;
+      border-radius: 0.2rem;
+    }
+
+    &:hover {
+      color: $color-black;
+      background-color: rgba($color-black, 0.02);
+    }
+  }
+
+  &__content {
+    display: grid;
+    overflow: hidden;
+    transition: all 0.5s 0.2s;
+
+    &--box {
+      padding: 1rem;
+
+      svg {
+        fill: rgba($color-logo, 0.9);
+        align-self: center;
+        width: 5rem;
+        transition: all 0.3s ease-in-out;
+      }
+
+      svg:hover {
+        transform: translateX(-5px);
+      }
+    }
+  }
+}

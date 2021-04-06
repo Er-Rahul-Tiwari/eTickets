@@ -1,0 +1,56 @@
+extends baseEmail
+
+block variables
+    - var os = details.operatingSystem
+    - var browser = details.browser
+    - var ip = details.geoIp
+    - var DT = details.curDT
+
+block content
+  p Hi #{firstName},
+  p Your ticket(s) are Confirmed!
+  p Booking ID: #{details.bookingId}
+  - var img = `https://31ae76e7cb1a.ngrok.io/qrcode/${details.bookingId}.png`
+  img.imgQRcode(src=img)
+  //- Event Name
+  p Event Name: #{details.eventName}.
+  //-   Ticket Name 
+  p Ticket Name: #{details.ticketName}.
+  //- Booking Date & Time
+  p Date and Timing(s): #{details.startTime} to #{details.endTime}.
+  p Location(s): #{details.address}.
+  
+  ul.box--list
+  hr.hr--color
+  li.list--items
+    span.item--left Order Summary
+  hr.hr--color
+  li.list--items
+    span.item--left Quantity
+    span.item--right #{details.quantity}
+  li.list--items
+    span.item--left Internet Handling Fee(s)
+    span.item--right FREE
+  li.list--items
+    span.item--left Booking Fee(s)
+    span.item--right FREE
+  li.list--items
+    span.item--left Service Tax Fee(s)
+    span.item--right FREE
+  li.list--items
+    span.item--left Swachh Bharat Cess Fee(s)
+    span.item--right  FREE
+  li.list--items
+    span.item--left Discount
+    span.item--right  NA
+  hr.hr--color
+  li.list--items
+    span.item--left AMOUNT PAID
+    span.item--right #{details.paid}
+  li.list--items
+    span.item--left PAYMENT METHOD
+    span.item--right #{details.paidMethod}
+  hr.hr--color
+
+  p Thanks for using TicketViral!
+  p The TicketViral Team

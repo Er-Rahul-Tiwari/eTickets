@@ -1,0 +1,38 @@
+.revenues {
+  grid-row: 2 / 3;
+  grid-column: center-start / center-end;
+
+  padding: 3rem 0;
+}
+
+.charts {
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 4rem;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.charts:hover {
+  transition: all 0.2s;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+  justify-self: center;
+  align-self: center;
+
+  &--sold {
+    color: $color-green-op;
+    text-transform: lowercase;
+    text-shadow: 3px 3px 5px rgba($color-black, 0.05);
+  }
+
+  &--left {
+    color: $color-yellow-op;
+    text-transform: lowercase;
+  }
+}

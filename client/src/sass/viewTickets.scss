@@ -1,0 +1,112 @@
+.tickets {
+  grid-row: 2 / 3;
+  grid-column: center-start / center-end;
+
+  padding: 3rem 0;
+
+  display: grid;
+  grid-template-columns: minmax(min-content, 2fr) 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
+
+  &--text {
+    display: grid;
+    grid-row-gap: 2rem;
+
+    &--header {
+      &-para {
+        @include clampLine-3;
+        font-size: 3rem;
+        color: $color-secondary-light-3;
+        line-height: 1.2;
+        font-weight: 600;
+      }
+
+      &-span {
+        color: $color-secondary-light-3;
+        margin: 0 0.5rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &--story {
+    &--img {
+      width: 100%;
+      display: grid;
+      justify-content: center;
+    }
+  }
+}
+
+.ticket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 2rem;
+
+  &--card {
+    padding: 3rem;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    &--name {
+      @include clampLine-2;
+      line-height: 1.2;
+      font-weight: 600;
+      color: $color-secondary-light-3;
+    }
+
+    &--location {
+      @include clampLine-1;
+    }
+
+    &--date {
+      @include clampLine-1;
+      color: $color-yellow-star;
+      font-weight: 600;
+    }
+  }
+
+  &--card:hover {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.requirement {
+  display: grid;
+  grid-row-gap: 2rem;
+}
+
+.curd {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.curd:hover .edit {
+  display: block;
+}
+
+.edit {
+  position: absolute;
+  color: $color-blue;
+  z-index: 2;
+  padding: 0.5rem 1rem;
+  top: 0rem;
+  right: 0rem;
+  font-weight: 700;
+  margin: 0.4rem 0;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+
+  transition: all 0.3s;
+  display: none;
+
+  &--color {
+    background-color: $color-primary;
+  }
+}
+
+.edit {
+  cursor: pointer;
+}

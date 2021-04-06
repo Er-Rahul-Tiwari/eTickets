@@ -1,0 +1,35 @@
+.footers {
+  grid-column: full-start / full-end;
+  padding: 7rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+
+  @media only screen and (max-width: $bp-large) {
+    .footer {
+      display: none;
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 0.5rem;
+
+  &__img {
+    display: grid;
+    align-self: end;
+    justify-self: center;
+
+    &--logo {
+      width: 12rem;
+    }
+  }
+
+  &__link {
+    font-size: $font-14;
+    color: $color-app-light;
+  }
+}

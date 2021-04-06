@@ -1,0 +1,67 @@
+//alert constants
+export const SET_ALERT = "SET_ALERT";
+export const REMOVE_ALERT = "REMOVE_ALERT";
+
+//errors constnats
+export const SET_ERRORS_LIST = "SET_ERRORS_LIST";
+export const REMOVE_ERRORS = "REMOVE_ERRORS";
+
+//Auth Constants
+export const USER_LOADED = "USER_LOADED";
+export const USER_PROFILE_LOADED = "USER_PROFILE_LOADED";
+export const AUTH_ERROR = "AUTH_ERROR";
+
+//login/logout/register, auth, profile constnats
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const CONFIRM_ACCOUNT = "CONFIRM_ACCOUNT";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+export const LOADING_ON_AUTH_SUBMIT = "LOADING_ON_AUTH_SUBMIT";
+
+//Forgot Password Constants
+export const RESET_LINK_SUCCESS = "RESET_LINK_SUCCESS";
+export const RESET_LINK_FAIL = "RESET_LINK_FAIL";
+
+//Users constants
+// export const USER_CREATED = "USER_CREATED";
+// export const USER_ERROR = "USER_CREATE_ERROR";
+// export const DELETE_USER = "DELETE_USER";
+// export const USER_UPDATED = "USER_UPDATED";
+// export const USER_LIST_UPDATED = "USER_LIST_UPDATED";
+// export const GET_USER_BY_ID = "GET_USER_BY_ID";
+// export const CHANGE_USER_STATUS = "CHANGE_USER_STATUS";
+// export const USER_SEARCH_PARAMATERS_UPDATE = "USER_SEARCH_PARAMATERS_UPDATE";
+export const USER_PROFILE_PASSWORD_ERROR = "USER_PROFILE_PASSWORD_ERROR";
+export const USER_PROFILE_PASSWORD_UPDATED = "USER_PROFILE_PASSWORD_UPDATED";
+
+//loading constant
+// export const INITIAL_LOADING = "INITIAL_LOADING";
+// export const LOADING_ON_SUBMIT = "LOADING_ON_SUBMIT";
+// export const LOADING_ON_CMS_SUBMIT = "LOADING_ON_CMS_SUBMIT";
+// export const LOADING_ON_EMAIL_SUBMIT = "LOADING_ON_EMAIL_SUBMIT";
+// export const LOADING_ON_INQUIRY_SUBMIT = "LOADING_ON_INQUIRY_SUBMIT";
+// export const LOADING_ON_SETTINGS_SUBMIT = "LOADING_ON_SETTINGS_SUBMIT";
+export const LOADING_ON_PROFILE_SUBMIT = "LOADING_ON_PROFILE_SUBMIT";
+// export const LOADING_ON_USER_SUBMIT = "LOADING_ON_USER_SUBMIT";
+export const LOADING_ON_CHANGING_PASSWORD = "LOADING_ON_CHANGING_PASSWORD";
+
+//Profile Constants
+export const USER_PROFILE_ERROR = "USER_PROFILE_ERROR";
+export const USER_PROFILE_UPDATED = "USER_PROFILE_UPDATED";
+// export const INITIAL_MODAL_STATE = "INITIAL_MODAL_STATE";
+
+//Event Constants
+export const EVENT_LIST = "EVENT_LIST";
+export const EVENT_CREATED = "EVENT_CREATED";
+export const EVENT_UPDATED = "EVENT_UPDATED";
+export const LOADING_ON_EVENT_SUBMIT = "LOADING_ON_EVENT_SUBMIT";
+export const EVENT_ERROR = "EVENT_ERROR";
+export const GET_EVENT_BY_ID = "GET_EVENT_BY_ID";
+
+// Ticket Constants
+export const TICKET_LIST = "TICKET_LIST";
+export const TICKET_CREATED = "TICKET_CREATED";
+export const LOADING_ON_TICKET_SUBMIT = "LOADING_ON_TICKET_SUBMIT";
+export const TICKET_ERROR = "TICKET_ERROR";

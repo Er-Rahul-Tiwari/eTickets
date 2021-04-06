@@ -1,0 +1,62 @@
+block variables
+doctype html
+
+html
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title= subject
+
+    include _style
+  body
+    table.body(role='presentation', border='0', cellpadding='0', cellspacing='0')
+      tbody
+        tr
+          td
+          td.container
+            .content
+            h3.logo TicketViral
+              // START CENTERED WHITE CONTAINER
+              table.main(role='presentation')
+
+                // START MAIN AREA
+                tbody
+                  tr
+                    td.wrapper
+                      table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                        tbody
+                          tr
+                            td
+                              // CONTENT
+                              block content
+                              
+                  // WHEN & WHERE 
+                  tr.whenWhere
+                    td.wrapper
+                      //- p When and where this happened:
+                      p More details:
+
+                      span.para-11 Date:
+                      p.para-11 #{DT}
+
+                      span.para-11 Operating System:
+                      p.para-11 #{os}
+
+                      span.para-11 Platform:
+                      p.para-11 #{browser}
+
+                      span.para-11 Approximate Location:
+                      p.para-11 #{geoIp}
+
+              // START FOOTER
+              .footer
+                table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+                  tbody
+                    tr
+                      td.content-block
+                        span.apple-link D & Y IT Solutions LLP
+                        br 
+                        | 601, Diamond Tower, Old Check Post, Vaishali Nagar, Jaipur 302019
+                        br
+                        |  Don't like these emails? 
+                        a(href='#') Unsubscribe

@@ -1,0 +1,6 @@
+.noMatch {
+  grid-row: 2 / 3;
+  grid-column: full-start / full-end;
+
+  @include absCenter;
+}

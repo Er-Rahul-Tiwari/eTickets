@@ -1,0 +1,31 @@
+import {USER_PROFILE_UPDATED, INITIAL_MODAL_STATE, USER_PROFILE_ERROR} from 'actions/types';
+
+const initalState = {
+    // currentTicket: [],
+    loading: true,
+    error: {},
+}
+
+export default function (state = initalState, action){
+    const { type, payload } = action;
+    switch (type) {
+        case USER_PROFILE_UPDATED:
+            return {
+                ...state,
+                loading: true,
+            };
+        case INITIAL_MODAL_STATE:
+            return {
+                ...state,
+                loading: false,
+            };
+        case USER_PROFILE_ERROR:
+            return {
+                ...state,
+                error: payload,
+                loading: false,
+            };
+        default:
+            return state;
+    }
+}
