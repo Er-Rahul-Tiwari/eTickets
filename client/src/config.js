@@ -7,5 +7,5 @@ module.exports = {
   SERVER_URL: process.env.REACT_APP_SERVER_URL,
   USER_TYPE_MANAGER: "event_manager",
   USER_TYPE_USER: "user",
-  USER_TYPE_ADMIN: "admin",
+  USER_TYPE_ADMIN: "admin", //
 };

@@ -1,0 +1,65 @@
+@import "../rootScss/root.scss";
+
+.rectBanner {
+  grid-row: 3/4;
+  grid-column: center-start / center-end;
+
+  &__picture {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    &--img {
+      grid-row: 3/4;
+      grid-column: 1/-1;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    &--paragraph {
+      grid-row: 3/4;
+      grid-column: 1 / 5;
+
+      margin: 8rem;
+      border-radius: 2px;
+
+      h2 {
+        color: $color-primary-3;
+      }
+    }
+
+    .linkColor {
+      color: $color-red-dark;
+      padding: 1rem 2rem;
+      background-color: $color-white;
+      font-weight: 700;
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+      border-radius: 2px;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+
+    &__picture {
+      background-color: $color-red-dark;
+      padding: 2rem;
+
+      &--img {
+        display: none;
+      }
+
+      &--paragraph {
+        grid-row: 4/5;
+        grid-column: 1 / -1;
+
+        margin: 2rem 0;
+
+        h2 {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+}

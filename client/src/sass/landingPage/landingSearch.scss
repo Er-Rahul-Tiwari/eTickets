@@ -1,0 +1,43 @@
+@import "../rootScss/root.scss";
+
+.search {
+  &__content {
+    grid-row: 3/4;
+    grid-column: col-start 4 / full-end;
+
+    padding: 2rem 6vw;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 4 / 5;
+      grid-column: 1 / -1;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 1rem;
+    }
+  }
+
+  &__picture {
+    grid-column: center-start / col-end 3;
+    grid-row: 3/4;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 5 / 6;
+      grid-column: 1 / -1;
+    }
+
+    &--img {
+      width: 100%;
+      box-shadow: 0 2rem 5rem rgba(#000, 0.1);
+      border-radius: 3px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.box {
+  margin: 1.5rem;
+}
+
+.bottom__underline {
+  margin: 1rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.bottom__line {
+  margin: 4rem 0;
+  border-bottom: 1px solid $color-primary-dark-1;
+}
+
+.or {
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: grid;
+    width: 20rem;
+    height: 1px;
+    background-color: $color-logo-op;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 20rem;
+    height: 1px;
+    background-color: $color-logo-op;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+  }
+
+  &--span {
+    text-transform: uppercase;
+    background-color: $color-primary;
+    color: $color-logo-op;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../rootScss/root.scss";
+
+.VIP_Banner {
+  grid-row: 5/6;
+  grid-column: center-start / center-end;
+
+  &__picture {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    &--img {
+      grid-row: 3/4;
+      grid-column: 1/-1;
+      width: 100%;
+      border-radius: 3px;
+    }
+
+    &--paragraph {
+      grid-row: 3/4;
+      grid-column: 1 / 5;
+
+      margin: 8rem;
+      border-radius: 2px;
+
+      h1 {
+        color: $color-primary-3;
+        font-size: 3.5rem;
+      }
+    }
+
+    .vipLink {
+      color: $color-green-vip;
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: full-start / full-end;
+
+    &__picture {
+      background-color: #000;
+      padding: 2rem;
+
+      &--paragraph {
+        grid-row: 4/5;
+        grid-column: 1 / -1;
+
+        margin: 2rem 0;
+
+        h1 {
+          font-size: 2.6rem;
+        }
+      }
+    }
+  }
+}

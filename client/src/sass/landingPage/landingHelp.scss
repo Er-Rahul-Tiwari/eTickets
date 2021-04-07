@@ -1,0 +1,48 @@
+@import "../rootScss/root.scss";
+
+.help {
+  border-top: 4px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 4px solid rgba(255, 255, 255, 0.12);
+
+  grid-row: 4 / 5;
+  grid-column: col-start 3 / col-end 7;
+
+  padding: 5rem;
+
+  display: grid;
+  text-align: center;
+  justify-content: center;
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-row: 6 / 7;
+    grid-column: 1 / -1;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem;
+  }
+
+  &__input {
+    padding: 1.6rem 2rem;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+    transition: all 0.3s;
+    background-color: $color-white;
+    outline: none;
+
+    &--box {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &__btn {
+    padding: 1.45rem 2rem;
+    border: 2px solid $color-white;
+    border-radius: 0;
+  }
+}

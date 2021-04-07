@@ -1,0 +1,55 @@
+.banner {
+  cursor: pointer;
+
+  &__shape {
+    position: relative;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    padding: 5px;
+  }
+
+  &__img {
+    height: 100%;
+    transform: translateX(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+
+  &__caption {
+    position: absolute;
+    color: $color-white;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -20%);
+    font-size: $font-18;
+    transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    backface-visibility: hidden;
+    filter: brightness(50%);
+  }
+}
+
+//////////////////////////////////////
+
+.descriptionBlur {
+  // max-height: 25rem;
+  mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+  -webkit-mask-image: linear-gradient(#fff, #fff, rgba(255, 255, 255, 0));
+}
+
+//////////////////////////////////////

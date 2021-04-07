@@ -1,0 +1,13 @@
+.col-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  border-bottom: 1px solid #f9f9f9;
+
+  .first {
+    grid-column: 1/2;
+  }
+
+  .second {
+    grid-column: 2/3;
+  }
+}

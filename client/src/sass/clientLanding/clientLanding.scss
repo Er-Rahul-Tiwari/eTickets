@@ -1,0 +1,50 @@
+.mainClientLayout {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+  grid-row-gap: 2rem;
+
+  @media only screen and (max-width: $bp-medium) {
+  }
+
+  @media only screen and (max-width: $bp-small) {
+  }
+}
+
+.clientLayout {
+  grid-column: center-start / center-end;
+  grid-row: 1/2;
+
+  h4 {
+    color: $color-logo;
+  }
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 7rem;
+
+    margin: 20rem 0;
+    align-items: center;
+
+    &--youAre {
+      display: grid;
+      justify-self: center;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      padding: 4rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    &--youAre:hover {
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

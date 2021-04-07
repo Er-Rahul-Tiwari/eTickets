@@ -1,5 +1,5 @@
 {
-  "name": "eticket",
+  "name": "eventdandyserver",
   "version": "1.0.0",
   "description": "Event Management System",
   "main": "app.js",
@@ -14,8 +14,8 @@
     "client-install": "npm install --prefix ../client",
     "install-all": "concurrently \"npm install\" \"npm run client-install\""
   },
-  "author": "Rahul Tiwari",
-  "license": "LIC",
+  "author": "Arnab Banerjee",
+  "license": "D & Y IT Solutions",
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "async": "^3.2.0",

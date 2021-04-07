@@ -1,0 +1,40 @@
+@import "../rootScss/root.scss";
+
+.price {
+  grid-row: 2/3;
+  grid-column: col-start 7 / center-end;
+
+  padding-top: 5rem;
+
+  @media screen and (max-width: $bp-large) {
+    grid-column: full-start / full-end;
+
+    padding-top: 0rem;
+    margin: 0 1.5rem;
+  }
+
+  &__checkout {
+    display: grid;
+    margin-top: 2rem;
+  }
+
+  &__coupon {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    margin-top: 1rem;
+
+    .form__input {
+      border-radius: 0;
+    }
+
+    .form__group {
+      display: grid;
+    }
+
+    .btn {
+      padding: 1.07rem;
+      border-radius: 0;
+    }
+  }
+}

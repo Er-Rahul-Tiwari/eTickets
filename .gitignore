@@ -7,3 +7,4 @@ client/package-lock.json
 client/.env
 client/src/views/.DS_Store
 .autogit
+autogit
